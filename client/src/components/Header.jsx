@@ -16,7 +16,7 @@ function Header() {
   );
 }
 
-<h1 className="text-4xl text-red-600 font-bold">Testas </h1>
+
 
 
 

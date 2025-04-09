@@ -19,4 +19,6 @@ function App() {
   );
 }
 
+<h1 className="text-4xl text-red-500 font-bold">Tailwind veikia </h1>
+
 export default App;
