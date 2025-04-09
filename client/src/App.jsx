@@ -9,7 +9,9 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<h1>Pagrindinis</h1>} />
+        <Route path="/" element={
+          <h1 className="text-4xl text-red-500 font-bold">Tailwind veikia </h1>
+        } />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/recipes" element={<RecipesPage />} />
@@ -18,7 +20,5 @@ function App() {
     </Layout>
   );
 }
-
-<h1 className="text-4xl text-red-500 font-bold">Tailwind veikia </h1>
 
 export default App;
