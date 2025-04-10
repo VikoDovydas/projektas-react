@@ -20,14 +20,31 @@ function RegisterPage() {
   };
 
   return (
-    <div>
-      <h2>Registracija</h2>
-      <form onSubmit={handleRegister}>
-        <input type="text" placeholder="Vartotojo vardas" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Slaptažodis" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Registruotis</button>
+    <div className="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+      <h2 className="text-2xl font-bold mb-4">Registracija</h2>
+      <form onSubmit={handleRegister} className="space-y-4">
+        <input
+          type="text"
+          placeholder="Vartotojo vardas"
+          className="w-full border rounded px-3 py-2"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Slaptažodis"
+          className="w-full border rounded px-3 py-2"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          type="submit"
+          className="bg-purple-600 text-white py-2 px-4 w-full rounded hover:bg-purple-700 transition"
+        >
+          Registruotis
+        </button>
       </form>
-      <p>{message}</p>
+      {message && <p className="text-sm text-center mt-4">{message}</p>}
     </div>
   );
 }

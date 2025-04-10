@@ -3,9 +3,11 @@ import Footer from './Footer';
 
 function Layout({ children }) {
   return (
-    <div className="app-container">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Header />
-      <main>{children}</main>
+      <main className="flex-grow flex justify-center items-center">
+        {children}
+      </main>
       <Footer />
     </div>
   );
