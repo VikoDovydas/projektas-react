@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold text-black-600"> 🍽️ Mano slapti receptai 🍽️</h1>
+      <h1 className="text-2xl font-bold text-black-600">Mano receptai</h1>
 
       <nav className="space-x-4">
         <Link to="/recipes" className="hover:underline">Receptai</Link>
