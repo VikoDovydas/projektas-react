@@ -1,12 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; // 🔑 importuojam kontekstą
+import { useAuth } from "../context/AuthContext"; 
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth(); // 🔐 pasiimam login funkciją iš konteksto
+  const { login } = useAuth(); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -18,13 +18,13 @@ function LoginPage() {
         password,
       });
 
-      // 💾 išsaugom vartotoją kontekste
+      
       login(res.data.user);
 
-      // 🔁 redirect
+     
       navigate("/recipes");
     } catch (err) {
-      alert("Prisijungimas nepavyko!");
+      alert("Prisijungimas nepavyko");
     }
   };
 

@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold text-red-600">🍽️ Receptų sistema</h1>
+      <h1 className="text-2xl font-bold text-black-600"> 🍽️ Mano slapti receptai 🍽️</h1>
 
       <nav className="space-x-4">
         <Link to="/recipes" className="hover:underline">Receptai</Link>
@@ -14,7 +14,7 @@ function Header() {
 
         {user ? (
           <>
-            <span className="text-gray-600">Sveikas, {user.username} 👋</span>
+            <span className="text-pink-600">Sveikas, {user.username} </span>
             <button
               onClick={logout}
               className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"

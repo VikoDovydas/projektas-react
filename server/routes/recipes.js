@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-// Gauti visus receptus
+// GET
 router.get('/', (req, res) => {
   db.query('SELECT * FROM recipes', (err, data) => {
     if (err) return res.status(500).json(err);
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   });
 });
 
-// Pridėti naują receptą
+// Add
 router.post('/', (req, res) => {
   const { title, description } = req.body;
   const q = 'INSERT INTO recipes (title, description, user_id) VALUES (?, ?, ?)';
@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
   });
 });
 
-// Atnaujinti receptą
+// Update
 router.put('/:id', (req, res) => {
   const { title, description } = req.body;
   const q = 'UPDATE recipes SET title = ?, description = ? WHERE id = ?';
@@ -30,7 +30,7 @@ router.put('/:id', (req, res) => {
   });
 });
 
-// Ištrinti receptą
+// Delete
 router.delete('/:id', (req, res) => {
   const q = 'DELETE FROM recipes WHERE id = ?';
   db.query(q, [req.params.id], (err, result) => {
